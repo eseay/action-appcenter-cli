@@ -2,8 +2,11 @@ name: 'App Center publish release'
 description: 'GitHub Action to use publish a build via the "appcenter distribute release" CLI command. Testers will not be notified via email.'
 author: 'Mitch Ware'
 inputs: 
+  owner_name:
+    description: 'Owner name, as defined by the AppCenter API.'
+    required: true 
   app_name:
-    description: 'App name, as defined by the AppCenter API (<ownerName>/<appName> format)'
+    description: 'App name, as defined by the AppCenter API.'
     required: true 
   group_name:
     description: 'Group name, as defined by the AppCenter API. Can be a comma-separated list of multiple groups'
@@ -18,6 +21,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
+    OWNER_NAME: ${{ inputs.owner_name }}
     APP_NAME: ${{ inputs.app_name }}
     GROUP_NAME: ${{ inputs.group_name }}
     FILE_PATH: ${{ inputs.file_path }}

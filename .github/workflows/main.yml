@@ -9,7 +9,8 @@ jobs:
       - name: Test upload
         uses: ./
         with:
-          app_name: one-1kpu/CFA-Alpha-Staging-Incremental
+          owner_name: one-1kpu
+          app_name: CFA-Alpha-Staging-Incremental
           group_name: Collaborators
           file_path: sample-app-debug.apk
           token: ${{ secrets.APP_CENTER_API_TOKEN }}
