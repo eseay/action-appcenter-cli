@@ -10,6 +10,6 @@ jobs:
         uses: ./
         with:
           app_name: one-1kpu/CFA-Alpha-Staging-Incremental
-          group_id: CFA-One-Android-Devs
-          file_path: ./sample-app-debug.apk
+          group_name: CFA-One-Android-Devs
+          file_path: sample-app-debug.apk
           token: ${{ secrets.APP_CENTER_API_TOKEN }}
