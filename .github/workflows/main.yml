@@ -6,7 +6,9 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@master
-      - name: Upload test
+      - name: Action test
         with:
-          command: appcenter distribute release --app "$APP_CENTER_INCREMENTAL_APP_NAME" --file "$PATH_TO_INCREMENTAL_APK" --group "$APP_CENTER_INCREMENTAL_GROUP_ID" --silent --debug
+          app_name: ${{ secrets.app_name }}
+          group_id: ${{ secrets.group }}
+          file_path: ${{ secrets.app_name }}
           token: ${{ secrets.APP_CENTER_API_TOKEN }}

@@ -1,2 +1,2 @@
 #!/bin/bash
-$INPUT_COMMAND --token "$INPUT_TOKEN"
+appcenter distribute release --app $APP_NAME --file $FILE_PATH --group $GROUP_NAME --silent --debug --token $API_TOKEN
