@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@master
-      - name: Action test
+      - name: Test upload
         with:
-          app_name: ${{ secrets.APP_NAME }}
-          group_id: ${{ secrets.GROUP_NAME }}
+          app_name: one-1kpu/CFA-Alpha-Staging-Incremental
+          group_id: CFA-One-Android-Devs
           file_path: ./sample-app-debug.apk
           token: ${{ secrets.APP_CENTER_API_TOKEN }}
