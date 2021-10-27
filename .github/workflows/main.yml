@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@master
       - name: Action test
         with:
-          app_name: ${{ secrets.app_name }}
-          group_id: ${{ secrets.group }}
-          file_path: ${{ secrets.app_name }}
+          app_name: ${{ secrets.APP_NAME }}
+          group_id: ${{ secrets.GROUP_NAME }}
+          file_path: ./sample-app-debug.apk
           token: ${{ secrets.APP_CENTER_API_TOKEN }}
