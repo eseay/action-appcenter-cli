@@ -6,8 +6,7 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@master
-      - name: Upload aab file to production track of the Play Store
-        uses: ./
+      - name: Upload test
         with:
-          command: appcenter distribute stores publish -s Alpha -f app/build/outputs/apk/release/app-release-unsigned.apk -r note -a user/app
-          token: Test Token
+          command: appcenter distribute release --app "$APP_CENTER_INCREMENTAL_APP_NAME" --file "$PATH_TO_INCREMENTAL_APK" --group "$APP_CENTER_INCREMENTAL_GROUP_ID" --silent --debug
+          token: ${{ secrets.APP_CENTER_API_TOKEN }}
