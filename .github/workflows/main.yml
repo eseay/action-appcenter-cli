@@ -14,3 +14,4 @@ jobs:
           group_name: Collaborators
           file_path: sample-app-debug.apk
           token: ${{ secrets.APP_CENTER_API_TOKEN }}
+        if: false
